@@ -171,9 +171,9 @@ Or follow these steps:
 ## Credits
 Based on work from [@briancmpbll](https://github.com/briancmpbll/home_assistant_custom_envoy)
 
-[releases-shield]: https://img.shields.io/github/v/release/vincentwolsink/home_assistant_enphase_envoy_installer.svg?style=for-the-badge
+[releases-shield]: https://img.shields.io/github/v/release/liamosaur/home_assistant_enphase_envoy_installer.svg?style=for-the-badge
 [releases]: https://github.com/liamosaur/home_assistant_enphase_envoy_installer/releases
-[maintainer-shield]: https://img.shields.io/badge/maintainer-vincentwolsink-blue.svg?style=for-the-badge
+[maintainer-shield]: https://img.shields.io/badge/maintainer-liamosaur-blue.svg?style=for-the-badge
 [maintainer]: https://github.com/liamosaur/
 [hacs-shield]: https://img.shields.io/badge/HACS-Custom-41BDF5.svg?style=for-the-badge
 [hacs-url]: https://github.com/liamosaur/home_assistant_enphase_envoy_installer/releases
