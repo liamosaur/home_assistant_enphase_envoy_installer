@@ -1204,6 +1204,9 @@ class EnvoyReader:
 
         _LOGGER.info("Updating endpoints %s", endpoints)
         for endpoint in endpoints:
+            if endpoint == "api":
+                continue  # api is not an endpoint to fetch
+            
             endpoint_settings = self.uri_registry.get(endpoint)
 
             _LOGGER.info("VALIDATING ENDPOINT %s", endpoint)
