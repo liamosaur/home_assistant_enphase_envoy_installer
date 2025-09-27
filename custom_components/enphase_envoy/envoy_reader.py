@@ -510,6 +510,12 @@ class EnvoyStandard(EnvoyData):
         installer="endpoint_pdm_energy.production.pcu.wattHoursLifetime",
     )
 
+    @envoy_property(required_endpoint="api")
+    def api(self):
+        token = self.reader._token
+        _LOGGER.debug("Retrieved API token: %s", token)
+        return token
+
     @envoy_property(required_endpoint="endpoint_production_v1")
     def lifetime_production(self):
         lifetime_production = self._resolve_path(self._lifetime_production_path)
