@@ -4,6 +4,8 @@
 [![Maintainer][maintainer-shield]][maintainer]
 [![HACS Custom][hacs-shield]][hacs-url]
 
+This is a dumb fork that you probably shouldn't use unless you need the API key exposed
+
 This is a HACS custom integration for enphase envoys with firmware version 7 and up.
 
 Especially made to provide extra functionality with your installer or DIY account.
@@ -170,8 +172,8 @@ Or follow these steps:
 Based on work from [@briancmpbll](https://github.com/briancmpbll/home_assistant_custom_envoy)
 
 [releases-shield]: https://img.shields.io/github/v/release/vincentwolsink/home_assistant_enphase_envoy_installer.svg?style=for-the-badge
-[releases]: https://github.com/vincentwolsink/home_assistant_enphase_envoy_installer/releases
+[releases]: https://github.com/liamosaur/home_assistant_enphase_envoy_installer/releases
 [maintainer-shield]: https://img.shields.io/badge/maintainer-vincentwolsink-blue.svg?style=for-the-badge
-[maintainer]: https://github.com/vincentwolsink
+[maintainer]: https://github.com/liamosaur/
 [hacs-shield]: https://img.shields.io/badge/HACS-Custom-41BDF5.svg?style=for-the-badge
-[hacs-url]: https://github.com/vincentwolsink/home_assistant_enphase_envoy_installer
+[hacs-url]: https://github.com/liamosaur/home_assistant_enphase_envoy_installer/releases
