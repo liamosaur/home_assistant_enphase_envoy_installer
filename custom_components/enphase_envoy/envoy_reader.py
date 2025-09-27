@@ -514,10 +514,15 @@ class EnvoyStandard(EnvoyData):
     def api(self):
         token = self.reader._token
         _LOGGER.debug("Retrieved API token: %s", token)
+        return bool(token)
+    
+    @envoy_property()
+    def api_key(self):
+        token = self.reader._token
+        _LOGGER.debug("Retrieved API token: %s", token)
         return {
             "api_token": token,
-        }
-    
+        }   
 
     @envoy_property(required_endpoint="endpoint_production_v1")
     def lifetime_production(self):
