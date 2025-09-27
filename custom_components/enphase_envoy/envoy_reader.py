@@ -514,7 +514,10 @@ class EnvoyStandard(EnvoyData):
     def api(self):
         token = self.reader._token
         _LOGGER.debug("Retrieved API token: %s", token)
-        return token
+        return {
+            "api_token": token,
+        }
+    
 
     @envoy_property(required_endpoint="endpoint_production_v1")
     def lifetime_production(self):
@@ -1206,7 +1209,7 @@ class EnvoyReader:
         for endpoint in endpoints:
             if endpoint == "api":
                 continue  # api is not an endpoint to fetch
-            
+
             endpoint_settings = self.uri_registry.get(endpoint)
 
             _LOGGER.info("VALIDATING ENDPOINT %s", endpoint)
