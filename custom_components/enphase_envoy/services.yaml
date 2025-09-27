@@ -13,5 +13,8 @@ upload_grid_profile:
       example: "/share/grid_profiles/64d31e5868ac391817b21af1"
       selector:
         text:
-
+enable_dpel:
+  description: Enable DPEL (Dynamic Power Export Limit)
+disable_dpel:
+  description: Disable DPEL (Dynamic Power Export Limit)
 
