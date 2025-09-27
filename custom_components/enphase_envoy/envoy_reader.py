@@ -1419,34 +1419,29 @@ class EnvoyReader:
             self._clear_endpoint_cache("endpoint_production_power")
 
     async def enable_dpel(self):
-        if self.endpoint_dpel is not None:
-            formatted_url = ENVOY_ENDPOINTS["dpel"]["url"].format(self.host)
-            enable_dpel_json='''{
-               "dynamic_pel_settings": {
-               "enable": true,
-               "export_limit": true,
-               "limit_value_W": 50.0,
-               "slew_rate": 50.0,
-               "enable_dynamic_limiting": false
-               },
-               "filename": "site_settings",
-               "version": "00.00.01"}'''
-            await self._async_post(formatted_url, data=enable_dpel_json)
-            # Make sure the next poll will update the endpoint.
-            self._clear_endpoint_cache("endpoint_dpel")
+        formatted_url = ENVOY_ENDPOINTS["dpel"]["url"].format(self.host)
+        enable_dpel_json='''{
+            "dynamic_pel_settings": {
+            "enable": true,
+            "export_limit": true,
+            "limit_value_W": 50.0,
+            "slew_rate": 50.0,
+            "enable_dynamic_limiting": false
+            },
+            "filename": "site_settings",
+            "version": "00.00.01"}'''
+        await self._async_post(formatted_url, data=enable_dpel_json)
+
 
     async def disable_dpel(self):
-        if self.endpoint_dpel is not None:
-            formatted_url = ENVOY_ENDPOINTS["dpel"]["url"].format(self.host)
-            disable_dpel_json='''{
-               "dynamic_pel_settings": {
-               "enable": false
-               },
-               "filename": "site_settings",
-               "version": "00.00.01"}'''
-            await self._async_post(formatted_url, data=disable_dpel_json)
-            # Make sure the next poll will update the endpoint.
-            self._clear_endpoint_cache("endpoint_dpel")
+        formatted_url = ENVOY_ENDPOINTS["dpel"]["url"].format(self.host)
+        disable_dpel_json='''{
+            "dynamic_pel_settings": {
+            "enable": false
+            },
+            "filename": "site_settings",
+            "version": "00.00.01"}'''
+        await self._async_post(formatted_url, data=disable_dpel_json)
 
     async def set_grid_profile(self, profile_id):
         if self.endpoint_installer_agf is not None:
