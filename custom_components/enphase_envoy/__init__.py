@@ -158,6 +158,14 @@ async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
         ),
     )
 
+    async def async_get_api_key_service(call):
+       await envoy_reader.init_authentication()
+       token = envoy_reader._token 
+       _LOGGER.debug("Retrieved API token: %s", token)
+       return {"api_key": token}
+
+    hass.services.async_register(DOMAIN, "get_api_key", async_get_api_key_service)
+
     async def get_grid_profiles(call: ServiceCall) -> ServiceResponse:
         return {
             "selected_profile": coordinator.data.get("grid_profile"),

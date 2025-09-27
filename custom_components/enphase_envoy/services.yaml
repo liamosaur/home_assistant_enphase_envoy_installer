@@ -13,3 +13,7 @@ upload_grid_profile:
       example: "/share/grid_profiles/64d31e5868ac391817b21af1"
       selector:
         text:
+get_api_key:
+  description: "Fetch the current short-lived API key from Enphase Envoy"
+
+
