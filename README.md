@@ -4,7 +4,23 @@
 [![Maintainer][maintainer-shield]][maintainer]
 [![HACS Custom][hacs-shield]][hacs-url]
 
-This is a dumb fork that you probably shouldn't use unless you need the API key exposed
+## Information about this fork
+
+This is a fork of the awesome Home Assistant custom integration by vincentwolsink
+This fork adds support for enabling and disabling Dynamic Power Export Limiting (DPEL)
+It creates a new binary sensor that shows if DPEL is currently enabled, and it adds two 
+Home Assistant Services to enable and disable DPEL. Using these services, you can 
+create automations like:
+   IF Feed in Tarrif (Grid Export) price is less than 0, Enable DPEL (i.e. stop exporting)
+   IF Feed in Tarrif (Grid Export) price is more than 0, Disable DPEL (i.e. start exporting)
+
+Note that DPEL is only supported by certain Enphase systems and needs both 
+Production and Consumption CTs to be installed and present.
+
+Note that this functionality uses an API call for which there is no public documentation
+(that I can find, at least), so there is a level of risk involved. *I have zero interest in maintaining this repo, and I don't recommend you use it yourself on an ongoing basis.* I'll test this for a few weeks, and if it seems to work as expected, I might submit an upstream PR with the changes
+
+## Information from the upstream project
 
 This is a HACS custom integration for enphase envoys with firmware version 7 and up.
 
