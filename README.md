@@ -8,9 +8,7 @@
 
 This is a fork of the awesome Home Assistant custom integration by vincentwolsink
 This fork adds support for enabling and disabling Dynamic Power Export Limiting (DPEL)
-It creates a new binary sensor that shows if DPEL is currently enabled, and it adds two 
-Home Assistant Services to enable and disable DPEL. Using these services, you can 
-create automations like:
+It adds two Home Assistant Services to enable and disable DPEL. Using these services, you can create automations like:
    IF Feed in Tarrif (Grid Export) price is less than 0, Enable DPEL (i.e. stop exporting)
    IF Feed in Tarrif (Grid Export) price is more than 0, Disable DPEL (i.e. start exporting)
 
