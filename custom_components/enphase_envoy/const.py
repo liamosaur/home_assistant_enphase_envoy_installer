@@ -111,11 +111,6 @@ SENSORS = (
         device_class=SensorDeviceClass.POWER,
     ),
     SensorEntityDescription(
-        key="api",
-        name="API key",
-        entity_category=EntityCategory.DIAGNOSTIC,
-    ),    
-    SensorEntityDescription(
         key="daily_production",
         name="Today's Energy Production",
         native_unit_of_measurement=UnitOfEnergy.WATT_HOUR,
